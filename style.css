@@ -1,0 +1,910 @@
+*{
+    margin : 0 ;
+    padding: 0 ;
+    box-sizing: border-box;
+    font-family: 'gilroy';
+}
+
+html, body{
+   height: 100%;
+   width: 100%; 
+   overflow-x: hidden;
+}
+
+#page1{
+    min-height: 100vh ;
+    width: 100% ;
+    background-color: #EFEAE3;
+    position: relative ;
+}
+nav{
+    width: 100% ;
+    padding: 2vw 3vw ;
+    display: flex;
+    align-items: center;
+    justify-content: space-between ;
+     position :relative ;
+    z-index: 101 ;
+}
+
+#nav-part2{
+    display: flex ;
+    align-items: center;
+    gap:1vw ;
+}
+
+#nav-part2 h4{
+    padding: 10px 20px; ;
+    border: 1px solid black;
+    border-radius: 50px;
+    font-weight: 500px ;
+    color: rgba(0, 0, 0, 0.829);
+    font-size: 18px ;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+}
+
+#nav-part2 h4::after{
+    content:"" ;
+    background-color:rgb(0, 0, 0) ;
+    height: 100% ;
+    width: 100%;
+    bottom:-100% ;
+    left:0 ;
+    position:absolute ;
+    border-radius: 50%;
+    transition:all ease 0.5s ;
+    overflow: hidden;
+    
+}
+
+#nav-part2 h4:hover::after{
+    bottom:0 ;
+    border-radius: 0;
+    z-index: -1;
+}
+#nav-part2 h4:hover{
+    color: white;
+}
+
+nav h3{
+    display: none ;
+}
+#center{
+    height:70vh ;
+    width:100% ;
+    display:flex ;
+    justify-content: space-between;
+    align-items: end;
+    padding:2vh ;
+    position: relative;
+    z-index: 10;
+}
+
+#center h3{
+    width:35vw ;
+    font-size:3vw ;
+}
+
+#center h1{
+    font-size: 8vw ;
+    width:30vw ;
+    text-align: right;
+  
+}
+
+video{
+    width:100% ;
+    padding: 2vh ;
+    border-radius: 5vh ;
+  /*  margin-left: 8vw;*/
+    position: relative;
+}
+
+#heroAnimation{
+    position: relative;
+    background-color: blue;
+    top:-6vw ;
+    transform: translateX(68vw);
+
+    
+}
+
+#hero1{
+    height:30vw ;
+    width: 30vw ;
+    border-radius: 50%;
+    background-color: red;
+    filter:blur(10px) ;
+    position: absolute;
+}
+
+#hero2{
+    height:30vw ;
+    width: 30vw ;
+    border-radius: 50%;
+    background-color: rgb(255, 0, 0);
+    filter:blur(10px) ;
+    position: absolute;
+    animation-name:anime ;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+#hero3{
+    height:30vw ;
+    width: 30vw ;
+    border-radius: 50%;
+    background-color: rgb(255, 0, 0);
+    filter:blur(10px) ;
+    position: absolute;
+    animation-name:anime2 ;
+    animation-duration: 5s;
+    animation-timing-function:linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes anime {
+  from{
+    transform: translate(-20%, -10%);
+  }
+  to{
+    transform: translate(10%, 10%);
+  }
+}
+
+@keyframes anime2 {
+    from{
+      transform: translate(30%, 5%);
+    }
+    to{
+      transform: translate(-10%, 20%);
+    }
+  }
+
+  @keyframes move {
+    from {
+        transform: translateX(0);
+    }
+
+    to{
+        transform: translate(-100%);
+    }
+  }
+  #page2{
+    min-height: 100vh ;
+    width:100% ;
+    background-color: #EFEAE3;
+    padding: 8vw 0vw ;
+    position: relative ;
+
+  }
+
+#gola{
+    height:70px ;
+    width:70px ;
+    margin: 1vw 2vw ;
+    border-radius: 50%;
+    background: red;
+    display:inline-block ;
+}
+
+#moving-text h1{
+    display: inline-block;
+    font-size: 9vw ;
+}
+
+#moving-text{
+    white-space: nowrap ;
+}
+
+#con{
+    display: inline-block;
+    white-space: nowrap ;
+    animation-name:move ;
+    animation-duration: 10s ;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+#page2-bottom{
+    height: 70vh ;
+    width:100% ;
+    padding : 4vw ;
+   /* background-color: rgb(236, 121, 121); */
+    display:flex ;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+#page2-bottom h1{
+    width :55% ;
+    line-height: 5vw ;
+    font-size: 5vw;
+    position: relative;
+    z-index: 9;
+}
+
+#bottom-part2{
+    width : 20% ;
+}
+
+#bottom-part2 img{
+    width :100% ;
+    border-radius: 15px ;
+}
+
+#bottom-part2 p {
+    margin-top: 2vw ;
+}
+
+#page2 #gooey{
+    height :30vw ;
+    width : 30vw ;
+    border-radius: 50% ;
+    position : absolute ;
+    background: linear-gradient(to top right, #ff1003, #ff5c0b) ;
+    top : 58% ;
+    left : 25% ;
+       
+
+    animation-name: gooey ;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+
+
+}
+
+@keyframes gooey{
+    from{
+        filter: blur(10px);
+        transform: translate(10%, -10%) skew(0);
+    }
+    to{
+        filter: blur(10px);
+        transform: translate(-10%, 10%) skew(-14deg);
+    }
+}
+
+#page3{
+    min-height :100vh ;
+    width:100% ;
+   /* padding: 4vw 0 ;*/
+     background-color: #EFEAE3;
+}
+
+.elem{
+    width : 100% ;
+    height : 150px ;
+    position:relative ;
+    border-bottom: 1px solid black;
+    display: flex;
+    align-items: center;
+    /*padding: 0 2vw;*/
+    overflow: hidden;
+}
+
+.elem h2{
+    position:relative ;
+    padding: 0 2vw;
+    z-index: 9 ;
+}
+
+.overlay{
+    width : 100% ;
+    height : 100% ;
+    background-color: orange;
+    position: absolute;
+    top : -100% ;
+    transition : all ease 0.25s ;
+}
+
+.elem:hover .overlay{
+    top:0 ;
+}
+
+#fixed-image{
+    height:30vw ;
+    width:24vw ;
+    background-color: chartreuse;
+    position : fixed ;
+    z-index: 9 ;
+    top : 20% ;
+    left : 60% ;
+    display : none ;
+     background-size: cover;
+    background-position: center;
+}
+
+ 
+ #page-4{
+  height:95vh ;
+  width:100% ;
+  display:flex ;
+  border-radius: 10px;
+  justify-content: space-between;
+  background-color: rgb(0, 0, 0);
+  color:rgb(210, 209, 209) ;
+}
+
+#img-container{
+  background-color: aqua;
+  height:100% ;
+  width:60% ;
+  border-radius: 10px ;
+  background-image: url('design.jpg');
+   background-size: cover;
+    background-position: center;
+}
+
+#text-container{
+    width : 35% ;
+    
+    margin-left: 8vw ;
+    margin-top : 11vh ;
+    color:rgb(144, 144, 144) ;
+}
+#text-container p{
+  width:60% ;
+  color: rgb(255, 255, 255);
+  font-size: 1.2vw ;
+}
+
+#text-container h1{
+    position: relative;
+    
+}
+#text-container h1::before{
+  content: "";
+  height :180% ;
+  width:4px ;
+  background-color: rgb(144, 144, 144);
+  position: absolute;
+  left : -15px ;
+  top : -10px ;
+}
+
+#head1{
+  color :white ;
+}
+#head1::before{
+  color :white ;
+}
+
+#head1:hover::before{
+  background-color: rgb(230, 37, 37);
+}
+
+#head2:hover::before{
+  background-color: rgb(255, 32, 32);
+}
+
+#head3:hover::before{
+  background-color: rgb(252, 30, 30);
+}
+/* ------------------------------------- */
+#page5 {
+    height: 70vh;
+    width: 100%;
+    background-color: #EFEAE3;
+    padding: 10vw 2vw;
+}
+.swiper {
+      width: 100%;
+      height: 100%;
+    
+    }
+
+    .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      /* background: #fff; */
+      border-left: 1px solid #aeadad;
+    }
+
+    .swiper .swiper-slide {
+      width: 30%;
+    }
+
+/* ------------------------------------ */
+#page6{
+    height : 100vh ;
+    width: 100% ;
+    position: relative;
+}
+
+#main{
+    /* background-color: black; */
+    width:100% ;
+    position: relative;
+    z-index: 10;
+}
+
+#footer{
+    background-color: black;
+    width :98% ;
+    height : 100vh ;
+    position :fixed ;
+    z-index: 9 ;
+    bottom : 0 ;
+    display:flex ;
+    /* align-items: flex-end; */
+    justify-content: space-between;
+    flex-direction: column; 
+    color: #EFEAE3;
+}
+
+#footer h1{
+    color: #EFEAE3;
+    font-size: 18vw;
+    text-align: center;
+    z-index: 10;
+
+}
+
+#footer-div{
+    height : 44vh ;
+    width : 100% ;
+    background-color: #ff1003;
+    display: flex;
+    justify-content: space-around;
+    
+}
+
+#footer-bottom {
+    border-top : 1px solid #dadada ;
+    height : 4vh ;
+    width : 100% ;
+    display : flex ;
+    justify-content: space-between;
+    padding: 2vh ;
+}
+
+#footer-div-right p{
+    width : 9vw ;
+     z-index: 10;
+     position: relative;
+     margin-top :6vh ;
+
+}
+
+#footer-div-left{
+    margin-top: 4vh ;
+}
+
+#footer-div-left h2{
+   z-index: 10;
+   position: relative;
+   margin :2vh ;
+   font-size: 6vw ;
+  
+}
+
+#gooey2-child1 {
+      height : 30vw ;
+      width: 30vw ;
+      background-color: black;
+      border-radius: 50% ;
+      position: absolute;
+      bottom : 30vh ;
+      left : -8vh ;
+      filter:blur(5px) ;
+
+    animation-name: gooey2-child1 ;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+}
+
+#gooey2-child2 {
+      height : 30vw ;
+      width: 30vw ;
+      background-color: black;
+      border-radius: 50% ;
+      position: absolute;
+      bottom : 33vh ;
+      left : 11vh ;
+      filter:blur(5px) ;
+
+       animation-name: gooey2-child2 ;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+}
+
+#gooey2-child3 {
+      height : 30vw ;
+      width: 30vw ;
+      background-color: black;
+      border-radius: 50% ;
+      position: absolute;
+      bottom : 35vh ;
+      left : 43vh ;
+      filter:blur(5px) ;
+
+       animation-name: gooey2-child3 ;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+}
+#gooey2-child4 {
+      height : 30vw ;
+      width: 30vw ;
+      background-color: black;
+      border-radius: 50% ;
+      position: absolute;
+      bottom : 32vh ;
+      left : 60vh ;
+      filter:blur(5px) ;
+
+       animation-name: gooey2-child4 ;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+}
+
+#gooey2-child5 {
+      height : 30vw ;
+      width: 30vw ;
+      background-color: black;
+      border-radius: 50% ;
+      position: absolute;
+      bottom : 30vh ;
+      left : 80vh ;
+      filter:blur(5px) ;
+
+       animation-name: gooey2-child5 ;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+}
+@keyframes gooey2-child1{
+    from{
+      
+        transform: translate(0%, 4%) skew(0);
+    }
+    to{
+    
+        transform: translate(0%, -5%) skew(-12deg);
+    }
+}
+
+@keyframes gooey2-child2{
+    from{
+      
+        transform: translate(0%, -2%) skew(0);
+    }
+    to{
+    
+        transform: translate(0%, -10%) skew(-7deg);
+    }
+}
+
+
+@keyframes gooey2-child3{
+    from{
+      
+        transform: translate(0%, 0%) skew(0);
+    }
+    to{
+    
+        transform: translate(0%, 12%) skew(-7deg);
+    }
+}
+
+@keyframes gooey2-child4{
+    from{
+      
+        transform: translate(0%, 0%) skew(0);
+    }
+    to{
+    
+        transform: translate(0%, 8%) skew(-7deg);
+    }
+}
+
+@keyframes gooey2-child5{
+    from{
+      
+        transform: translate(0%, 0%) skew(0);
+    }
+    to{
+    
+        transform: translate(0%, -5%) skew(-7deg);
+    }
+}
+
+#full-scr{
+    background-color: rgba(0, 0, 0, 0.532);
+    height : 100vh ;
+    width : 100% ;
+    position: fixed; 
+    z-index: 99; 
+    top : -100% ;
+    transition: all ease 0.5s;
+    
+}
+
+#full-div1{
+    height : 50% ;
+    width: 100% ;
+    background-color: #EFEAE3;
+    border-bottom-left-radius: 20px ;
+    border-bottom-right-radius: 20px ;
+}
+
+
+@media (max-width:600px){
+    #page1{
+    min-height: 100vh ;
+    width: 100% ;
+    padding: 0 0vw;
+}
+nav{
+    padding: 8vw 5vw ;
+    position :relative ;
+    z-index: 101 ;
+    background-color: #EFEAE3;
+}
+
+nav img{
+    height : 9vh ;
+    transition: all ease 0.2s;
+}
+
+#nav-part2{
+    display : none ;
+}
+
+nav h3{
+    display: block;
+    padding : 3vw 5vw ;
+    border : 1px solid #ababab ;
+    border-radius: 50px ;
+    font-size: 4vw ;
+    font-weight: 200;
+    padding-left: 10vw ;
+}
+
+#center{
+    height:62vh ;
+    width:100% ;
+    display:flex ;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+    align-items: end;
+    padding: 5vw 5vw ;
+    padding-bottom: 10vw;
+}
+
+#center h3{
+    width:80% ;
+    font-size:5.5vw ;
+    line-height: 6VW;
+}
+
+#center h1{
+    font-size: 16vw ;
+    width:70vw ;
+    text-align: right;
+    line-height: 14VW;
+  
+}
+
+video{
+    width:100% ;
+    padding: 2vh ;
+    border-radius: 5vh ;
+    object-fit: cover;
+    object-position: center;
+    height: 70vh;
+  /*  margin-left: 8vw;*/
+    position: relative;
+}
+
+#heroAnimation{
+    position: relative;
+    background-color: blue;
+    top : -25vw ;
+    transform: translateX(50vw);
+
+    
+}
+
+#hero1{
+    height:43vw ;
+    width: 43vw ;
+    border-radius: 50%;
+    background-color: red;
+    filter:blur(10px) ;
+    position: absolute;
+}
+
+#hero2{
+    height:43vw ;
+    width: 43vw ;
+    border-radius: 50%;
+    background-color: rgb(255, 0, 0);
+    filter:blur(10px) ;
+    position: absolute;
+    animation-name:anime ;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+#hero3{
+    height:43vw ;
+    width: 43vw ;
+    border-radius: 50%;
+    background-color: rgb(255, 0, 0);
+    filter:blur(10px) ;
+    position: absolute;
+    animation-name:anime2 ;
+    animation-duration: 5s;
+    animation-timing-function:linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+ #page2{
+    min-height: 100vh ;
+    width:100% ;
+    background-color: #EFEAE3;
+    padding: 8vw 0vw ;
+    position: relative ;
+
+  }
+
+#gola{
+    height:25px ;
+    width:25px ;
+    margin: 2vw 2vw ;
+    border-radius: 50%;
+    background: red;
+    display:inline-block ;
+}
+
+#moving-text h1{
+    display: inline-block;
+    font-size: 14vw ;
+}
+
+#moving-text{
+    white-space: nowrap ;
+}
+
+#con{
+    display: inline-block;
+    white-space: nowrap ;
+    animation-name:move ;
+    animation-duration: 10s ;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+#page2-bottom{
+    min-height: 50vh ;
+    width:100% ;
+    padding : 10vw 4vw ;
+    
+    display:flex ;
+    align-items: flex-start ;
+    justify-content: center; 
+     /* flex-wrap: wrap;  */
+    /* flex-direction: column; */ 
+    position: relative;
+    z-index: 9;
+}
+
+#page2-bottom h1{
+    width :95% ;
+    line-height: 7.5vw;
+    margin-bottom: 5vh ;
+    font-size: 8vw;
+    position: relative;
+    z-index: 9;
+}
+
+#bottom-part2{
+    width : 70% ;
+    position: relative;
+    z-index: 9;
+}
+
+#bottom-part2 img{
+    width :100% ;
+    border-radius: 15px ;
+}
+
+#bottom-part2 p {
+    margin-top: 2vw ;
+}
+
+#page2 #gooey{
+    height :30vw ;
+    width : 30vw ;
+    border-radius: 50% ;
+    position : absolute ;
+    background: linear-gradient(to top right, #ff1003, #ff5c0b) ;
+    top : 58% ;
+    left : 25% ;
+       
+
+    animation-name: gooey ;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+
+
+}
+}
+
+#loader{
+    height: 100%;
+    width: 100%;
+    background-color: #000;
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    transition: all ease 0.7s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#loader h1{
+    font-size: 4vw;
+    color: transparent;
+    background: linear-gradient(to right,orange,orangered);
+    -webkit-background-clip: text;
+    background-clip: text ;
+    position: absolute;
+    opacity: 0;
+    animation-name: load;
+    animation-duration: 1s;
+    animation-delay: 1s;
+    animation-timing-function: linear;
+}
+#loader h1:nth-child(2){
+    animation-delay: 2s;
+}
+#loader h1:nth-child(3){
+    animation-delay: 3s;
+}
+
+@keyframes load {
+    0%{
+        opacity: 0;
+    }
+    10%{
+        opacity: 1;
+    }
+    90%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+
+@media (max-width:600px) {
+    #loader h1{
+        font-size: 9vw;
+      
+    }
+}

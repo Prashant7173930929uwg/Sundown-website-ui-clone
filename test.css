@@ -1,0 +1,66 @@
+ 
+ #page-4{
+  height:95vh ;
+  width:100% ;
+  display:flex ;
+  border-radius: 10px;
+  justify-content: space-between;
+  background-color: rgb(0, 0, 0);
+  color:rgb(210, 209, 209) ;
+}
+
+#img-container{
+  background-color: aqua;
+  height:100% ;
+  width:60% ;
+  border-radius: 10px ;
+  background-image: url('design.jpg');
+   background-size: cover;
+    background-position: center;
+}
+
+#text-container{
+    width : 35% ;
+    
+    margin-left: 8vw ;
+    margin-top : 11vh ;
+    color:rgb(144, 144, 144) ;
+}
+#text-container p{
+  width:60% ;
+  color: rgb(255, 255, 255);
+  font-size: 1.2vw ;
+}
+
+#text-container h1{
+    position: relative;
+    
+}
+#text-container h1::before{
+  content: "";
+  height :180% ;
+  width:4px ;
+  background-color: rgb(144, 144, 144);
+  position: absolute;
+  left : -15px ;
+  top : -10px ;
+}
+
+#head1{
+  color :white ;
+}
+#head1::before{
+  color :white ;
+}
+
+#head1:hover::before{
+  background-color: rgb(230, 37, 37);
+}
+
+#head2:hover::before{
+  background-color: rgb(255, 32, 32);
+}
+
+#head3:hover::before{
+  background-color: rgb(252, 30, 30);
+}
