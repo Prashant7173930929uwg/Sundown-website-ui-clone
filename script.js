@@ -61,7 +61,7 @@ head3.addEventListener('click', ()=>{
     head2.style.color = 'rgb(144, 144, 144)' ;
 
      para.innerHTML = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur soluta fugit consequatur aliquam aperiam mollitia quod consectetur, illum veniam molestiae cupiditate nam! Autem deserunt laboriosam nostrum consequuntur ipsum molestias saepe, deleniti veritatis tempore corporis asperiores eos et aspernatur nisi sit." ;
-     imgContainer.style.backgroundImage = 'url("execution.jpeg")' ;
+     imgContainer.style.backgroundImage = 'url("execution.webp")' ;
 
 })
 
