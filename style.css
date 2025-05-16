@@ -315,7 +315,7 @@ video{
     width:24vw ;
     background-color: chartreuse;
     position : fixed ;
-    z-index: 9 ;
+    z-index: 11 ;
     top : 20% ;
     left : 60% ;
     display : none ;
